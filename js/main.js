@@ -32,7 +32,6 @@ async function setFileName() {
 			});
 		});
 	}
-
 }
 
 async function setActivity() {

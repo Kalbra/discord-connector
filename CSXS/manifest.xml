@@ -44,10 +44,16 @@
                     </CEFCommandLine>
                 </Resources>
                 <Lifecycle>
-                    <AutoVisible>true</AutoVisible>
+                    <AutoVisible>false</AutoVisible>
+                    <StartOn>
+                        <!-- Photoshop dispatches this event on startup -->
+                        <Event>applicationActivate</Event>
+                        <!-- Premiere Pro dispatches this event on startup -->
+                        <Event>com.adobe.csxs.events.ApplicationActivate</Event>
+                    </StartOn>
                 </Lifecycle>
                 <UI>
-                    <Type>Panel</Type>
+                    <Type>Modeless</Type>
                     <Menu>Discord Connector</Menu>
                     <Geometry>
                         <Size>
@@ -59,8 +65,11 @@
                             <Width>400</Width>
                         </MinSize>
                     </Geometry>
-                    <Icons />					
+                    <Icons>
+                        <Icon Type="Normal">./logos/DISCORD.png</Icon>
+                    </Icons>
                 </UI>
+
             </DispatchInfo>
         </Extension>
     </DispatchInfoList>
