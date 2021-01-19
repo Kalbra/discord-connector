@@ -18,6 +18,7 @@ function reloadDiscord(){
 
 
 async function setFileName() {
+	//Photoshop
 	if(app_name == "PHXS"){
 		csInterface.evalScript("app.activeDocument.name", function (filename) {
 			rpc.setActivity({
@@ -32,6 +33,7 @@ async function setFileName() {
 			});
 		});
 	}
+	//Illustrator
 	else if(app_name == "ILST"){
 		csInterface.evalScript("app.activeDocument.name", function (filename) {
 			rpc.setActivity({
@@ -46,6 +48,22 @@ async function setFileName() {
 			});
 		});
 	}
+	//InDesign
+	else if(app_name == "IDSN"){
+		csInterface.evalScript("app.activeDocument.name", function (filename) {
+			rpc.setActivity({
+				details: 'InDesign',
+				state: filename,
+				startTimestamp,
+				largeImageKey: 'idsn',
+				largeImageText: 'InDesign',
+				smallImageKey: 'adobe',
+				smallImageText: 'Adobe',
+				instance: false,
+			});
+		});
+	}
+
 }
 
 async function setActivity() {
