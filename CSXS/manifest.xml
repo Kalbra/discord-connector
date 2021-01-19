@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+/*************************************************************************
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+* Copyright 2014 Adobe Inc.
+* All Rights Reserved.
+*
+* NOTICE: Adobe permits you to use, modify, and distribute this file in
+* accordance with the terms of the Adobe license agreement accompanying
+* it. If you have received this file from a source other than Adobe,
+* then your use, modification, or distribution of it requires the prior
+* written permission of Adobe. 
+**************************************************************************/
+-->
+<ExtensionManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ExtensionBundleId="com.discord.connector" ExtensionBundleVersion="1.0" Version="5.0">
+    <ExtensionList>
+        <Extension Id="com.discord.connector" Version="1.0"/>
+    </ExtensionList>
+    <ExecutionEnvironment>
+        <HostList>
+            <Host Name="IDSN" Version="[10.0,10.9]"/>
+            <Host Name="AICY" Version="[10.0,10.9]"/>
+            <Host Name="ILST" Version="[18.0,18.9]"/>
+            <Host Name="PHSP" Version="15.0"/>
+            <Host Name="PHXS" Version="15.0"/>
+        </HostList>
+        <LocaleList>
+            <Locale Code="All"/>
+        </LocaleList>
+        <RequiredRuntimeList>
+            <RequiredRuntime Name="CSXS" Version="5.0"/>
+        </RequiredRuntimeList>
+    </ExecutionEnvironment>
+    <DispatchInfoList>
+        <Extension Id="com.discord.connector">
+            <DispatchInfo>
+                <Resources>
+                    <MainPath>./html/index.html</MainPath>
+                    <CEFCommandLine>
+                        <Parameter>--enable-nodejs</Parameter>
+                        <Parameter>--mixed-context</Parameter>
+                    </CEFCommandLine>
+                </Resources>
+                <Lifecycle>
+                    <AutoVisible>true</AutoVisible>
+                </Lifecycle>
+                <UI>
+                    <Type>Panel</Type>
+                    <Menu>Discord Connector</Menu>
+                    <Geometry>
+                        <Size>
+                            <Height>550</Height>
+                            <Width>400</Width>
+                        </Size>
+                        <MinSize>
+                            <Height>550</Height>
+                            <Width>400</Width>
+                        </MinSize>
+                    </Geometry>
+                    <Icons />					
+                </UI>
+            </DispatchInfo>
+        </Extension>
+    </DispatchInfoList>
+</ExtensionManifest>
