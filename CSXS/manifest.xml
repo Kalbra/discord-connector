@@ -20,9 +20,9 @@
     </ExtensionList>
     <ExecutionEnvironment>
         <HostList>
-            <Host Name="IDSN" Version="[10.0,10.9]"/>
-            <Host Name="AICY" Version="[10.0,10.9]"/>
-            <Host Name="ILST" Version="[18.0,18.9]"/>
+            <Host Name="IDSN" Version="10.0"/>
+            <Host Name="AICY" Version="10.0"/>
+            <Host Name="ILST" Version="18.0"/>
             <Host Name="PHSP" Version="15.0"/>
             <Host Name="PHXS" Version="15.0"/>
         </HostList>

@@ -32,6 +32,20 @@ async function setFileName() {
 			});
 		});
 	}
+	else if(app_name == "ILST"){
+		csInterface.evalScript("app.activeDocument.name", function (filename) {
+			rpc.setActivity({
+				details: 'Illustrator',
+				state: filename,
+				startTimestamp,
+				largeImageKey: 'ilst',
+				largeImageText: 'Illustrator',
+				smallImageKey: 'adobe',
+				smallImageText: 'Adobe',
+				instance: false,
+			});
+		});
+	}
 }
 
 async function setActivity() {
