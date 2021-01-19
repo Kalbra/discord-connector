@@ -20,11 +20,27 @@
     </ExtensionList>
     <ExecutionEnvironment>
         <HostList>
+            <!--InDesign-->
             <Host Name="IDSN" Version="10.0"/>
+            <!--InCopy-->
             <Host Name="AICY" Version="10.0"/>
+            <!--Illustrator-->
             <Host Name="ILST" Version="18.0"/>
+            <!--Photoshop-->
             <Host Name="PHSP" Version="15.0"/>
             <Host Name="PHXS" Version="15.0"/>
+            <!--PremierePro-->
+            <Host Name="PPRO" Version="4.0"/>
+            <!--Prelude-->
+            <Host Name="PRLD" Version="3.0"/>
+            <!--After Effects-->
+            <Host Name="AEFT" Version="13.0"/>
+            <!--Animate-->
+            <Host Name="FLPR" Version="14.0"/>
+            <!--Audition-->
+            <Host Name="AUDT" Version="7.0"/>
+            <!--Dreamweaver-->
+            <Host Name="DRWV" Version="13.0"/>
         </HostList>
         <LocaleList>
             <Locale Code="All"/>

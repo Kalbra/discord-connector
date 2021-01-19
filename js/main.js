@@ -63,6 +63,21 @@ async function setFileName() {
 			});
 		});
 	}
+	//InCopy
+	else if(app_name == "AICY"){
+		csInterface.evalScript("app.activeDocument.name", function (filename) {
+			rpc.setActivity({
+				details: 'InCopy',
+				state: filename,
+				startTimestamp,
+				largeImageKey: 'aicy',
+				largeImageText: 'InCopy',
+				smallImageKey: 'adobe',
+				smallImageText: 'Adobe',
+				instance: false,
+			});
+		});
+	}
 
 }
 
