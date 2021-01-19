@@ -2,7 +2,7 @@
 Adobe CC extension to add discord rich press to discord by using adobe CEP
 
 ### Supported app
-- [ ] Photoshop 
+- [x] Photoshop 
 - [ ] Illustrator
 - [ ] Premiere Pro
 - [ ] InDesign

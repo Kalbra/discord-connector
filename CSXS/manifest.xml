@@ -69,7 +69,6 @@
                         <Icon Type="Normal">./logos/DISCORD.png</Icon>
                     </Icons>
                 </UI>
-
             </DispatchInfo>
         </Extension>
     </DispatchInfoList>
