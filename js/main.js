@@ -78,7 +78,96 @@ async function setFileName() {
 			});
 		});
 	}
-
+	//Premiere Pro
+	else if(app_name == "PPRO"){
+		csInterface.evalScript("app.project.name", function (filename) {
+			rpc.setActivity({
+				details: 'Premiere Pro',
+				state: filename,
+				startTimestamp,
+				largeImageKey: 'ppro',
+				largeImageText: 'Premiere Pro',
+				smallImageKey: 'adobe',
+				smallImageText: 'Adobe',
+				instance: false,
+			});
+		});
+	}
+	//Prelude
+	else if(app_name == "PRLD"){
+		csInterface.evalScript("app.project.name", function (filename) {
+			rpc.setActivity({
+				details: 'Prelude',
+				state: filename,
+				startTimestamp,
+				largeImageKey: 'prld',
+				largeImageText: 'Prelude',
+				smallImageKey: 'adobe',
+				smallImageText: 'Adobe',
+				instance: false,
+			});
+		});
+	}
+	//After Effects
+	else if(app_name == "AEFT"){
+		csInterface.evalScript("app.project.file.name", function (filename) {
+			rpc.setActivity({
+				details: 'After Effects',
+				state: decodeURI(filename),
+				startTimestamp,
+				largeImageKey: 'aeft',
+				largeImageText: 'After Effects',
+				smallImageKey: 'adobe',
+				smallImageText: 'Adobe',
+				instance: false,
+			});
+		});
+	}
+	//Animate
+	else if(app_name == "FLPR"){
+		csInterface.evalScript("app.fileName", function (filename) {
+			rpc.setActivity({
+				details: 'Animate',
+				state: filename,
+				startTimestamp,
+				largeImageKey: 'flpr',
+				largeImageText: 'Animate',
+				smallImageKey: 'adobe',
+				smallImageText: 'Adobe',
+				instance: false,
+			});
+		});
+	}
+	//Dreamweaver
+	else if(app_name == "DRWV"){
+		csInterface.evalScript("app.fileName", function (filename) {
+			rpc.setActivity({
+				details: 'Dreamweaver',
+				state: filename,
+				startTimestamp,
+				largeImageKey: 'drwv',
+				largeImageText: 'Dreamweaver',
+				smallImageKey: 'adobe',
+				smallImageText: 'Adobe',
+				instance: false,
+			});
+		});
+	}
+	//Audition
+	else if(app_name == "AUDT"){
+		csInterface.evalScript("app.activeDocument.path.split('\\').slice(-1)[0]", function (filename) {
+			rpc.setActivity({
+				details: 'Audition',
+				state: filename,
+				startTimestamp,
+				largeImageKey: 'audt',
+				largeImageText: 'Audition',
+				smallImageKey: 'adobe',
+				smallImageText: 'Adobe',
+				instance: false,
+			});
+		});
+	}
 }
 
 async function setActivity() {
