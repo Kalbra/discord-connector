@@ -1,0 +1,14 @@
+.node_modeles/
+.idea/
+.zxp/
+zxp/
+
+node_modules/.bin/
+
+node_modules/addressparser/
+
+node_modules/ansi-gray/
+
+node_modules/
+
+package-lock.json
