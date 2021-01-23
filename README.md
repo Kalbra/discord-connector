@@ -1,5 +1,5 @@
 # Discord Connector
-Adobe CC extension to add discord rich press to discord by using adobe CEP.
+Adobe CC extension to add Discord rich press to Discord by using Adobe CEP.
 
 
 ## Supported app
@@ -17,7 +17,8 @@ Adobe CC extension to add discord rich press to discord by using adobe CEP.
 
 ## Install
 
-### Install manual
+
+### Install by hand
 
 - Windows
     - Go to `C:\Program Files\Common Files\Adobe\CEP\extensions` if this not exist go to `C:\Program Files (x86)\Common Files\Adobe\CEP\extensions`
@@ -32,16 +33,18 @@ Adobe CC extension to add discord rich press to discord by using adobe CEP.
     - Go into this directory(`discord-connector`).
     - Open a CMD at this directory and run `git clone https://github.com/Kalbra/discord-connector.git`.
 
-> **Notice**: Git has to be installed.
+> **Notice**: Git has to be installed to download the files via this method.
 
 > **See also**: [Adobe Extension Folder](https://github.com/Adobe-CEP/CEP-Resources/blob/master/CEP_9.x/Documentation/CEP%209.0%20HTML%20Extension%20Cookbook.md#extension-folders) and [Git installation guide](https://www.atlassian.com/git/tutorials/install-git).
 
+## Contributing
+Pull requests and issues are always welcome. Also feature requests are also very welcome.
 
 ## Showcase
 
 |Photoshop|Illustrator|InDesign|
 |---------|-----------|--------|
 |![Photoshop](docs/Screenshot-photoshop.png)|![Illustrator](docs/Screenshot-illustrator.png)|![InDesign](docs/Screenshot-indesign.png)|
-|<center>**InCopy**</center>|<center>**Premiere Pro**</center>|<center>**After Effects**</center>|
+|<p align="center"><strong>InCopy</strong></p>|<p align="center"><strong>Premiere Pro</strong></p>|<p align="center"><strong>After Effects</strong></p>|
 |![InCopy](docs/Screenshot-incopy.png)|![InCopy](docs/Screenshot-premierepro.png)|![After Effects](docs/Screenshot-aftereffects.png)|
 
