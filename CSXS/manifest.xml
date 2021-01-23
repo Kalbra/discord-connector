@@ -69,7 +69,7 @@
                     </StartOn>
                 </Lifecycle>
                 <UI>
-                    <Type>Modeless</Type>
+                    <Type>ModalDialog</Type>
                     <Menu>Discord Connector</Menu>
                     <Geometry>
                         <Size>
