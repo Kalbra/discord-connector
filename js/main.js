@@ -17,10 +17,26 @@ function reloadDiscord(){
 }
 
 
+function documentDecoder(filename){
+	if(filename == "undefined"){
+		return "In menu"
+	}
+	else if(filename == "EvalScript error."){
+		return "In menu"
+	}
+	else if(filename == "Error 1302: No such element Line: 1 -> app.activeDocument.name"){
+		return "In menu"
+	}
+	else {
+		return filename
+	}
+}
+
 async function setFileName() {
 	//Photoshop
 	if(app_name == "PHXS"){
 		csInterface.evalScript("app.activeDocument.name", function (filename) {
+			filename = documentDecoder(filename);
 			rpc.setActivity({
 				details: 'Photoshop',
 				state: filename,
@@ -36,6 +52,7 @@ async function setFileName() {
 	//Illustrator
 	else if(app_name == "ILST"){
 		csInterface.evalScript("app.activeDocument.name", function (filename) {
+			filename = documentDecoder(filename);
 			rpc.setActivity({
 				details: 'Illustrator',
 				state: filename,
@@ -51,6 +68,7 @@ async function setFileName() {
 	//InDesign
 	else if(app_name == "IDSN"){
 		csInterface.evalScript("app.activeDocument.name", function (filename) {
+			filename = documentDecoder(filename);
 			rpc.setActivity({
 				details: 'InDesign',
 				state: filename,
@@ -66,6 +84,7 @@ async function setFileName() {
 	//InCopy
 	else if(app_name == "AICY"){
 		csInterface.evalScript("app.activeDocument.name", function (filename) {
+			filename = documentDecoder(filename);
 			rpc.setActivity({
 				details: 'InCopy',
 				state: filename,
@@ -81,6 +100,7 @@ async function setFileName() {
 	//Premiere Pro
 	else if(app_name == "PPRO"){
 		csInterface.evalScript("app.project.name", function (filename) {
+			filename = documentDecoder(filename);
 			rpc.setActivity({
 				details: 'Premiere Pro',
 				state: filename,
@@ -96,6 +116,7 @@ async function setFileName() {
 	//Prelude
 	else if(app_name == "PRLD"){
 		csInterface.evalScript("app.project.name", function (filename) {
+			filename = documentDecoder(filename);
 			rpc.setActivity({
 				details: 'Prelude',
 				state: filename,
@@ -111,6 +132,7 @@ async function setFileName() {
 	//After Effects
 	else if(app_name == "AEFT"){
 		csInterface.evalScript("app.project.file.name", function (filename) {
+			filename = documentDecoder(filename);
 			rpc.setActivity({
 				details: 'After Effects',
 				state: decodeURI(filename),
@@ -126,6 +148,7 @@ async function setFileName() {
 	//Animate
 	else if(app_name == "FLPR"){
 		csInterface.evalScript("app.fileName", function (filename) {
+			filename = documentDecoder(filename);
 			rpc.setActivity({
 				details: 'Animate',
 				state: filename,
@@ -141,6 +164,7 @@ async function setFileName() {
 	//Dreamweaver
 	else if(app_name == "DRWV"){
 		csInterface.evalScript("app.fileName", function (filename) {
+			filename = documentDecoder(filename);
 			rpc.setActivity({
 				details: 'Dreamweaver',
 				state: filename,
@@ -166,6 +190,18 @@ async function setFileName() {
 				smallImageText: 'Adobe',
 				instance: false,
 			});
+		});
+	}
+	else{
+		rpc.setActivity({
+			details: 'Adobe Creative Cloud',
+			state: `App key - ${app_name}`,
+			startTimestamp,
+			largeImageKey: 'cc',
+			largeImageText: 'Adobe Creative Cloud app',
+			smallImageKey: 'adobe',
+			smallImageText: 'Adobe',
+			instance: false,
 		});
 	}
 }
