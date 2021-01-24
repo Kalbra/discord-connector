@@ -4,16 +4,25 @@ import requests
 import json
 import zipfile
 from PIL import Image, ImageTk
+import platform
+import os
 
-EXTENSIONS_PATH = "C:\Program Files\Common Files\Adobe\CEP\extensions"
+if platform.system() == "Windows":
+    EXTENSIONS_PATH = "C:\Program Files\Common Files\Adobe\CEP\extensions"
+
+    if not os.path.isdir(EXTENSIONS_PATH):
+        EXTENSIONS_PATH = "C:\Program Files (x86)\Common Files\Adobe\CEP\extensions"
+
+else:
+    EXTENSIONS_PATH = "/Library/Application Support/Adobe/CEP/extensions"
+
 
 master = Tk()
-master.title = "Adobe Discord connector installer"
 master.configure(background='#192b5d')
 master.resizable(width=False, height=False)
 master.overrideredirect(True)
 
-load = Image.open("../docs/preview-image-small.png")
+load = Image.open("preview-image-small.png")
 render = ImageTk.PhotoImage(load)
 Label(master, image=render).grid(row=0)
 
@@ -32,9 +41,8 @@ def get_from_remote():
     bottom_button["text"] = "Done"
 
 
-#Label(master, text="Adobe Discord connector installer").grid(row=0)
 bottom_button = Button(master, text="Install", command=get_from_remote)
 bottom_button.grid(row=1, sticky="nsew")
 Button(master, text="Quit", command=master.quit).grid(row=2, sticky="nsew")
 
-mainloop( )
+mainloop()
