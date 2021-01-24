@@ -16,7 +16,8 @@ Adobe CC extension to add Discord rich press to Discord by using Adobe CEP.
 
 
 ## Install
-
+### Install with installer
+Download the zip folder [here](). Extract the zip folder, then run the `installer.exe` as administrator.
 
 ### Install by hand
 
