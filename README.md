@@ -39,7 +39,7 @@ Download the zip folder [here](https://github.com/Kalbra/discord-connector/relea
 > **See also**: [Adobe Extension Folder](https://github.com/Adobe-CEP/CEP-Resources/blob/master/CEP_9.x/Documentation/CEP%209.0%20HTML%20Extension%20Cookbook.md#extension-folders) and [Git installation guide](https://www.atlassian.com/git/tutorials/install-git).
 
 ## Contributing
-Pull requests and issues are always welcome. Also feature requests are also very welcome.
+Pull requests and issues are always welcome. You can also suggest a feature by using the [discussion](https://github.com/Kalbra/discord-connector/discussions) tab.
 
 ## Showcase
 
